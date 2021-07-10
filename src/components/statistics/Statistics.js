@@ -5,7 +5,7 @@ import s from './Statistics.module.css';
 
 const Statistics = ({ stats, title, id }) => (
   <section className={s.statistics}>
-    <h2 className={s.title}>{title}</h2>
+    {title ? <h2 className={s.title}>{title}</h2> : null}
 
     <ul className={s.statList}>
       {stats.map(({ id, label, percentage }) => (

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import f from './FriendList.module.css';
 
-const Friends = ({ avatar, name, isOnline }) => (
+const FriendListItem = ({ avatar, name, isOnline }) => (
   <li className={f.item}>
     <span className={isOnline ? f.statusOnline : f.statusOffline}>
       {isOnline}
@@ -12,9 +12,9 @@ const Friends = ({ avatar, name, isOnline }) => (
   </li>
 );
 
-Friends.propTypes = {
+FriendListItem.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
 
-export default Friends;
+export default FriendListItem;
